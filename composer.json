@@ -1,0 +1,186 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 7 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.5",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-xml": "*",
+        "composer/installers": "^1.2",
+        "composer/semver": "^1.4",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/preserve-paths": "^0.1",
+        "drupal/acl": "^1.1",
+        "drupal/addressfield": "^1.3",
+        "drupal/admin_menu": "^3.0@RC",
+        "drupal/admin_views": "^1.6",
+        "drupal/advanced_help": "^1.5",
+        "drupal/audiofield": "^1.5",
+        "drupal/backup_migrate": "^3.6",
+        "drupal/better_exposed_filters": "^3.6",
+        "drupal/better_formats": "^1.0@beta",
+        "drupal/bootstrap": "^3.22",
+        "drupal/bootstrap_site_alert": "^1.5",
+        "drupal/calendar": "^3.5",
+        "drupal/captcha": "^1.5",
+        "drupal/cck": "^3.0@alpha",
+        "drupal/chain_menu_access": "^2.0",
+        "drupal/ckeditor": "^1.18",
+        "drupal/composer_autoloader": "^1.0",
+        "drupal/content_access": "^1.2@beta",
+        "drupal/ctools": "^1.14",
+        "drupal/date": "^2.10",
+        "drupal/devel": "^1.6",
+        "drupal/diff": "^3.4",
+        "drupal/drupal": "~7.0",
+        "drupal/easy_breadcrumb": "^2.16",
+        "drupal/echo": "^1.9",
+        "drupal/email": "^1.3",
+        "drupal/emogrifier": "^1.18",
+        "drupal/entity": "^1.9",
+        "drupal/entityreference": "^1.5",
+        "drupal/faq": "^1.1",
+        "drupal/features": "^2.11",
+        "drupal/features_extra": "^1.0",
+        "drupal/field_collection": "^1.0@beta",
+        "drupal/field_group": "^1.6",
+        "drupal/file_system_switch": "^1.0@alpha",
+        "drupal/filefield_paths": "^1.1",
+        "drupal/fontawesome": "^3.8",
+        "drupal/forum_access": "^1.3",
+        "drupal/front": "^2.4",
+        "drupal/google_analytics": "^2.6",
+        "drupal/honeypot": "^1.25",
+        "drupal/htmlmail": "^2.71",
+        "drupal/imagemagick": "^1.0",
+        "drupal/imce": "^1.11",
+        "drupal/jquery_update": "^2.7",
+        "drupal/libraries": "^2.5",
+        "drupal/link": "^1.5",
+        "drupal/linkchecker": "^1.4",
+        "drupal/login_destination": "^1.4",
+        "drupal/masquerade": "^1.0@RC",
+        "drupal/mass_contact": "^1.1",
+        "drupal/mimemail": "^1.1",
+        "drupal/module_missing_message_fixer": "^1.7",
+        "drupal/navbar": "^1.7",
+        "drupal/nodereferrer": "^1.0@beta",
+        "drupal/notify": "^1.5",
+        "drupal/og": "^2.10",
+        "drupal/og_email_blast": "^1.1",
+        "drupal/panels": "^3.9",
+        "drupal/panels_bootstrap_layouts": "^3.0",
+        "drupal/pathauto": "^1.3",
+        "drupal/pathologic": "^3.1",
+        "drupal/phone": "^1.0@beta",
+        "drupal/private_files_download_permission": "^2.7",
+        "drupal/profile2": "^1.6",
+        "drupal/read_more": "^1.1",
+        "drupal/realname": "^1.3",
+        "drupal/recaptcha": "^2.2",
+        "drupal/references": "^2.2",
+        "drupal/references_dialog": "^1.0@beta",
+        "drupal/registry_rebuild": "^2.5",
+        "drupal/rpt": "^1.0",
+        "drupal/rules": "^2.11",
+        "drupal/search_krumo": "^1.6",
+        "drupal/security_review": "^1.3",
+        "drupal/shield": "^1.3",
+        "drupal/shs": "^1.7",
+        "drupal/signup": "1.x-dev",
+        "drupal/strongarm": "^2.0",
+        "drupal/tac_lite": "^1.2",
+        "drupal/taxonomy_csv": "^5.10",
+        "drupal/term_reference_tree": "^1.11",
+        "drupal/token": "^1.7",
+        "drupal/transliteration": "^3.2",
+        "drupal/variable": "^2.5",
+        "drupal/views": "^3.20",
+        "drupal/views_bootstrap": "^3.2",
+        "drupal/views_breadcrumb": "^1.0",
+        "drupal/views_bulk_operations": "^3.5",
+        "drupal/views_conditional": "^1.3",
+        "drupal/wysiwyg": "^2.5",
+        "drush/drush": "~8.0",
+        "symfony/filesystem": "~2.7|^3",
+        "webflo/drupal-finder": "^1.0.0"
+    },
+    "conflict": {
+        "drupal/core": "8.*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin/"
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-create-project-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/": ["type:drupal-core"],
+            "web/profiles/{$name}/": ["type:drupal-profile"],
+            "web/sites/all/drush/{$name}/": ["type:drupal-drush"],
+            "web/sites/all/libraries/{$name}/": ["type:drupal-library"],
+            "web/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+            "web/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"]
+        },
+        "patches": {
+            "cweagans/composer-patches": {
+                "Call the preserve paths hooks" : "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+            },
+            "drupal/date": {
+                "fix warning from PHP 7.3 for date module": "https://www.drupal.org/files/issues/2018-10-27/3009740-1-php-7.3-compatibility.patch"
+            }
+        },
+        "preserve-paths": [
+            "web/sites/all/drush",
+            "web/sites/all/libraries",
+            "web/sites/all/modules/contrib",
+            "web/sites/all/modules/custom",
+            "web/sites/all/modules/features",
+            "web/sites/all/themes/contrib",
+            "web/sites/all/themes/custom",
+            "web/sites/all/translations",
+            "web/sites/default"
+        ]
+    }
+}

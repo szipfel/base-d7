@@ -1,0 +1,25 @@
+version: '2'
+services:
+  php_apache:
+    build: docker/php
+    ports:
+    - 80
+    volumes:
+    - .:/var/www
+  db:
+    image: mysql:5.6
+    environment:
+      MYSQL_USER: musadpylon
+      MYSQL_PASSWORD: musadpylon
+      MYSQL_DATABASE: musadpylon
+      MYSQL_ROOT_PASSWORD: root
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+    - 80
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 8025
